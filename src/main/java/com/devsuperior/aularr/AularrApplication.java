@@ -30,5 +30,11 @@ public class AularrApplication implements CommandLineRunner {
 		User u5 = new User(null, "Claudia");
 		
 		userRepository.saveAll(Arrays.asList(u1, u2, u3, u4, u5));
+		
+		u1.getFollowing().addAll(Arrays.asList(u2, u3));
+		u2.getFollowing().addAll(Arrays.asList(u1, u4));
+		u5.getFollowing().addAll(Arrays.asList(u1, u3));		
+
+		userRepository.saveAll(Arrays.asList(u1, u2, u5));
 	}
 }
