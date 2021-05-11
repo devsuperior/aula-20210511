@@ -22,4 +22,16 @@ public class UserService {
 		List<User> result = repository.findAll();
 		return result.stream().map(x -> new UserDTO(x)).collect(Collectors.toList());
 	}
+	
+	@Transactional(readOnly = true)
+	public List<UserDTO> getFollowers(Long id) {
+		User user = repository.getOne(id);
+		return user.getFollowers().stream().map(x -> new UserDTO(x)).collect(Collectors.toList());
+	}
+
+	@Transactional(readOnly = true)
+	public List<UserDTO> getFollowing(Long id) {
+		User user = repository.getOne(id);
+		return user.getFollowing().stream().map(x -> new UserDTO(x)).collect(Collectors.toList());
+	}
 }
