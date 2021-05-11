@@ -15,7 +15,11 @@ https://devsuperior.com.br/bootcamp
 
 [![Image](https://img.youtube.com/vi/mCOcn9LQkos/mqdefault.jpg "Vídeo no Youtube")](https://youtu.be/mCOcn9LQkos)
 
-## Códigos para copiar
+## Modelo conceitual
+
+![Image](https://raw.githubusercontent.com/devsuperior/aula-20210511/main/mc-autorrelacionamento.png "Modelo conceitual")
+
+## Código para copiar
 
 ```java
 @ManyToMany
